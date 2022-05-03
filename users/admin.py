@@ -6,9 +6,9 @@ from django.contrib import admin
 # Register your models here.
 from users.models import UserProfile
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name', 'view_username']
+    list_display = ['view_username','first_name', 'last_name','age' ]
     @admin.display(empty_value='???')
     def view_username(self, obj):
         return obj.user.username
 
-admin.site.register(UserProfile)
+admin.site.register(UserProfile, UserProfileAdmin)
