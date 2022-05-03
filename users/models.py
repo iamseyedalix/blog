@@ -9,4 +9,4 @@ class UserProfile(models.Model):
     first_name = models.CharField(max_length=255, null=True)
     last_name = models.CharField(max_length=255, null=True)
     age = models.SmallIntegerField(null=True)
-
+    phone_number = models.CharField(max_length=15, null=True)
