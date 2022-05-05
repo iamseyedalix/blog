@@ -23,4 +23,5 @@ urlpatterns = [
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
     path('user-manage/', include('users.urls')),
+    path('posts/', include('appBlog.urls'))
 ]

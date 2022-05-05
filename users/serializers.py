@@ -6,7 +6,12 @@ class UserSerializer(serializers.ModelSerializer):
         mdoel = User
         fields = '__all__'
 
+class UserSerializerToken(serializers.ModelSerializer):
+    token = serializers.Field(source='my_token')
 
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'token')
 
 class UserProfilSerializer(serializers.ModelSerializer):
     class Meta:
